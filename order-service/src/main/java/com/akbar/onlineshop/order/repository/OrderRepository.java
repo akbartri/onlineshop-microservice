@@ -1,4 +1,4 @@
-package com.akbar.onlineshop.order;
+package com.akbar.onlineshop.order.repository;
 
 import com.akbar.onlineshop.order.model.Order;
 import org.springframework.data.jpa.repository.JpaRepository;
