@@ -93,7 +93,7 @@ public class AuthServiceImpl implements AuthService{
 
     private static User userDtoToUser(UserDto userDto,String token) {
         User user = new User();
-        user.setId(userDto.getUserId());
+        user.setId(userDto.getId());
         user.setLogin(userDto.getLogin());
         user.setToken(token);
         return user;

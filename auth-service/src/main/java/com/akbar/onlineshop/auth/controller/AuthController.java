@@ -24,7 +24,7 @@ public class AuthController {
     @PostMapping("/register")
     public ResponseEntity<?> register(@RequestBody RegisterDto registerDto) {
         log.info("Register..");
-        registerDto.setUserId(UUID.randomUUID().toString());
+        registerDto.setId(UUID.randomUUID().toString());
         registerDto.setPassword(BCrypt.hashpw(registerDto.getPassword(),BCrypt.gensalt()));
 
         ResponseDto responseDto = authService.register(registerDto);

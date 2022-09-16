@@ -12,15 +12,9 @@ import javax.persistence.Table;
 @Data
 public class Order {
     @Id
-    @Column(name = "order_id")
-    private String orderId;
-    @Column(name = "product_id")
-    private String productId;
+    private String id;
     @Column(name = "user_id")
     private String userId;
-    @Column(name = "address_id")
-    private String addressId;
-    private Integer quantity;
     @Column(name = "order_status")
     private String orderStatus;
 }

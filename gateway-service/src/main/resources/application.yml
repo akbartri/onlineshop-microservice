@@ -26,6 +26,12 @@ spring:
             - Path=/users/**
           filters:
             - AuthFilter
+        - id: product-service
+          uri: lb://product-service
+          predicates:
+            - Path=/products/**
+          filters:
+            - AuthFilter
 eureka:
   client:
     register-with-eureka: true

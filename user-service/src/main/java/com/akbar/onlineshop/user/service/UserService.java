@@ -11,4 +11,6 @@ public interface UserService {
     UserDto getUserByUserId(String userId);
     UserDto getUserByLogin(String login);
     ResponseDto saveUser(RegisterDto registerDto);
+
+    ResponseDto getUserOrder(String userId);
 }

@@ -1,0 +1,23 @@
+server:
+  port: 9004
+
+spring:
+  application:
+    name: product-service
+  datasource:
+    username: mysqluser
+    password: mysqlpassword
+    url: jdbc:mysql://127.0.0.1:3307/olshopmysql?serverTimezone=Asia/Jakarta
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true

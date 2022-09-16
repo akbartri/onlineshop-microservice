@@ -46,4 +46,11 @@ public class UserController {
         HttpStatus status = responseDto.getStatus().equals("0") ? HttpStatus.OK : HttpStatus.INTERNAL_SERVER_ERROR;
         return new ResponseEntity<>(responseDto,status);
     }
+
+    @GetMapping("/order")
+    public ResponseEntity<?> getUserOrder(@RequestParam String userId) {
+        ResponseDto responseDto = userService.getUserOrder(userId);
+        HttpStatus status = responseDto.getStatus().equals("0") ? HttpStatus.OK : HttpStatus.INTERNAL_SERVER_ERROR;
+        return new ResponseEntity<>(responseDto,status);
+    }
 }
