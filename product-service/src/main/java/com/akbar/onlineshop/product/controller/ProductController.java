@@ -16,9 +16,10 @@ import java.util.List;
 @RequestMapping("/products")
 public class ProductController {
 
-    @Autowired
     private ProductService productService;
-
+    public ProductController(ProductService productService) {
+        this.productService = productService;
+    }
     @GetMapping
     public ResponseEntity<?> getAllProducts() {
         ResponseDto responseDto = new ResponseDto();
